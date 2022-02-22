@@ -13,7 +13,7 @@ class Vehicle(models.Model):
 class NavigationRecord(models.Model):
     id = models.IntegerField(primary_key=True)
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE)
-    datetime = models.DateField(default=timezone.now)
+    datetime = models.DateTimeField(default=timezone.now)
     latitude = models.FloatField()
     longitude = models.FloatField()
 
